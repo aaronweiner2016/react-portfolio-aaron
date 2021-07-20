@@ -8,25 +8,8 @@ import PopupSearch from "../../components/popup/PopupSearch";
 import PopupMobileMenu from "../../components/popup/PopupMobileMenu";
 import FreelancerContent from "../../layouts/LayoutFreelancer";
 import Footer from "../../container/footer/FooterSix";
-import API from "../../lib/API"
 
 const HomeFreelancer = () => {
-
-    const [projects, setProjects] = useState([])
-
-    useEffect(() => {
-        loadProjects()
-    }, [])
-
-    function loadProjects() {
-        API.Projects.getProjects()
-            .then(res => {
-                console.log("SUCCESS", res)
-                // setProjects(res.data.Meetings)
-            })
-            .catch(err => console.log("ERROR", err));
-    };
-
 
     return (
         <Fragment>

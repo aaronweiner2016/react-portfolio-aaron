@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
-// const { Category } = require('../../models');
+const { Projects } = require('../../models');
 
 
 router.get('/all', async (req, res) => {
     try {
-        // const categories = await Category.findAll();
-
+        const projectsData = await Projects.findAll();
+        console.log(projectsData)
         // res.json(categories)
-        console.log("good")
 
     } catch (err) {
         console.log("here-----------", err);

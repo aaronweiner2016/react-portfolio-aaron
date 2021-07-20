@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Projects.init({
     projectName: DataTypes.STRING,
     image: DataTypes.STRING,
-    summary: DataTypes.STRING,
+    summary: DataTypes.TEXT,
     github: DataTypes.STRING,
     url: DataTypes.STRING
   }, {
